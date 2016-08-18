@@ -103,5 +103,10 @@ namespace SaveTheIntern
 
         #endregion
 
+        private void nextButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Instructions2), null);
+        }
+
     }
 }

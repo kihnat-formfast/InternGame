@@ -50,8 +50,14 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
+            <Button x:Name="nextButton"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}" Margin="1062,59,-983,0" RenderTransformOrigin="3.212,0.636" Click="nextButton_Click">
+                <Button.RenderTransform>
+                    <CompositeTransform Rotation="-180"/>
+                </Button.RenderTransform>
+            </Button>
             <TextBlock x:Name="pageTitle" Text="Don't Get Fired: Instructions" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" FontFamily="Berlin Sans FB"/>
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="58,0,265,41" FontFamily="Berlin Sans FB"/>
         </Grid>
         <Canvas x:Name="instructionCanvas" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="4">
             <Canvas.Background>
@@ -74,17 +80,7 @@
                 <ImageBrush Stretch="UniformToFill" ImageSource="ryan.jpg"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Rectangle Height="50" Stroke="Black" Width="50" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Canvas.ZIndex="1" Margin="0,0,550,0">
-            <Rectangle.Fill>
-                <ImageBrush Stretch="Fill" ImageSource="code.jpg"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="target" Height="50" Stroke="Black" Width="50" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,550,0">
-            <Rectangle.Fill>
-                <ImageBrush Stretch="Fill" ImageSource="commandline.jpg"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Ellipse Height="75" Stroke="Black" Width="75" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,550,0">
+        <Ellipse Height="75" Stroke="Black" Width="75" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,550,0">
             <Ellipse.Fill>
                 <ImageBrush Stretch="UniformToFill" ImageSource="josh.jpeg"/>
             </Ellipse.Fill>
@@ -94,18 +90,16 @@
                 <ImageBrush Stretch="UniformToFill" ImageSource="irfan.jpg"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Rectangle Height="50" Canvas.Left="1150" Stroke="Black" Canvas.Top="345" Width="50" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,550,0">
-            <Rectangle.Fill>
-                <ImageBrush Stretch="UniformToFill" ImageSource="test.jpg"/>
-            </Rectangle.Fill>
-        </Rectangle>
+        <Ellipse Height="100" Stroke="Black" Width="100" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,550,0">
+                <Ellipse.Fill>
+                <ImageBrush Stretch="UniformToFill" ImageSource="brandon.jpg"/>
+            </Ellipse.Fill>
+        </Ellipse>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="1" TextWrapping="Wrap" Text="Bossman:  &#xD;&#xA;Stay away from him.  If he touches you, you're FIRED!" VerticalAlignment="Center" Width="485" FontSize="24" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="2" TextWrapping="Wrap" Text="Rebecca (Bosswoman):  &#xD;&#xA;She's scary but nice.  If she touches you, you're FIRED!  If you can avoid her, she will get rid of any Bossmen she touches." VerticalAlignment="Center" Width="485" FontSize="24" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="3" TextWrapping="Wrap" Text="Ryan (Coworker):  &#xD;&#xA;He shows up when Rebecca takes away a Bossman.  He's super helpful and if touched, will spawn more projects!" VerticalAlignment="Center" Width="485" FontSize="24" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
-        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="1" TextWrapping="Wrap" Text="Main Project:&#xD;&#xA;There is always one main project.  Collecting it adds the most time to your timer and spawns another one." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
-        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="2" TextWrapping="Wrap" Text="Side Project:&#xD;&#xA;Given to you by coworkers, this project will add some time, but can be destroyed." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="4" TextWrapping="Wrap" Text="Irfan (Coworker):&#xD;&#xA;He is small and sneaky.  He will bounce around and move your projects.  If you can catch him, he will give you more time." VerticalAlignment="Center" Width="485" FontSize="24" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236"/>
-        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="3" TextWrapping="Wrap" Text="Josh (Coworker):&#xD;&#xA;He gets rid of all coworkers and projects he can find to generate tests. Touching him only makes more tests." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
-        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="4" TextWrapping="Wrap" Text="Test:&#xD;&#xA;Hard to complete, and adds or subtracts a random amount of time." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236" />
+        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="1" TextWrapping="Wrap" Text="Josh (Coworker):&#xD;&#xA;He gets rid of all coworkers and projects he can find to generate tests. Touching him only makes more tests." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
+        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="2" TextWrapping="Wrap" Text="Brandon (Coworker):&#xA;He only shows up occasionally, but he will clear the room with his shining personality (or ego depending on who you ask)" VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
     </Grid>
 </Page>
