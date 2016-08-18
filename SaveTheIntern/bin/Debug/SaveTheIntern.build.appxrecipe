@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LUPADHYAY-PC</Machine>
+    <WindowsUser>kihnat</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>792bc0d5-69e9-477a-a435-55f74f09cbaf</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\kihnat\Documents\InternGame\SaveTheIntern\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\SaveTheIntern.exe">
+      <PackagePath>SaveTheIntern.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\officebackground.png">
+      <PackagePath>officebackground.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\break-room.jpg">
+      <PackagePath>break-room.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\code.jpg">
+      <PackagePath>code.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\commandline.jpg">
+      <PackagePath>commandline.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\holt.jpg">
+      <PackagePath>holt.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\intern.jpg">
+      <PackagePath>intern.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\irfan.jpg">
+      <PackagePath>irfan.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\office.jpg">
+      <PackagePath>office.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\project.jpg">
+      <PackagePath>project.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\rebecca.jpg">
+      <PackagePath>rebecca.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\ryan.jpg">
+      <PackagePath>ryan.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\street.jpg">
+      <PackagePath>street.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\test.jpg">
+      <PackagePath>test.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\josh.jpeg">
+      <PackagePath>josh.jpeg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\Instructions.xbf">
+      <PackagePath>Instructions.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\SaveTheIntern.xr.xml">
+      <PackagePath>SaveTheIntern.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
