@@ -31,6 +31,7 @@ namespace SaveTheIntern
         DispatcherTimer targetTimer = new DispatcherTimer();
         DispatcherTimer rebeccaTimer = new DispatcherTimer();
         DispatcherTimer joshTimer = new DispatcherTimer();
+        DispatcherTimer brandonTimer = new DispatcherTimer();
         bool humanCaptured = false;
         int mainScore = 0;
         int sideScore = 0;
@@ -134,6 +135,9 @@ namespace SaveTheIntern
             joshTimer.Tick += joshTimer_Tick;
             joshTimer.Interval = TimeSpan.FromSeconds(20);
 
+            brandonTimer.Tick += brandonTimer_Tick;
+            brandonTimer.Interval = TimeSpan.FromSeconds(30);
+
             gameOver.Visibility = Visibility.Collapsed;
             gameOverText.Visibility = Visibility.Collapsed;
             playArea.Visibility = Visibility.Collapsed;
@@ -170,6 +174,7 @@ namespace SaveTheIntern
             targetTimer.Start();
             rebeccaTimer.Start();
             joshTimer.Start();
+            brandonTimer.Start();
             Canvas.SetLeft(target, random.Next(100, (int)playArea.ActualWidth - 100));
             Canvas.SetTop(target, random.Next(100, (int)playArea.ActualHeight - 100));
             Canvas.SetLeft(human, random.Next(100, (int)playArea.ActualWidth - 100));
@@ -185,6 +190,7 @@ namespace SaveTheIntern
                 rebeccaTimer.Stop();
                 if (joshTimer.IsEnabled)
                 { joshTimer.Stop(); }
+                brandonTimer.Stop();
                 humanCaptured = false;
 
                 startButton.Visibility = Visibility.Visible;
@@ -324,6 +330,11 @@ namespace SaveTheIntern
             joshTimer.Stop();
         }
 
+        void brandonTimer_Tick(object sender, object e)
+        {
+            AddBrandon();
+        }
+
 #endregion
 
         #region Adding Objects
@@ -408,6 +419,27 @@ namespace SaveTheIntern
             josh.PointerEntered += josh_PointerEntered;
         }
 
+        private async Task AddBrandon()
+        {
+            ContentControl brandon = new ContentControl();
+            brandon.Template = Resources["PettyTemplate"] as ControlTemplate;
+            AnimateRebecca(brandon, 0, playArea.ActualWidth - 100, "(Canvas.Left)", 3);
+            AnimateRebecca(brandon, random.Next((int)playArea.ActualHeight - 100),
+                random.Next((int)playArea.ActualHeight - 100), "(Canvas.Top)", 0.5);
+            playArea.Children.Add(brandon);
+            var list = playArea.Children;
+            var tomList = from obj in list
+                          where obj is ContentControl
+                          where ((ContentControl)obj).Template == Resources["EnemyTemplate"] as ControlTemplate
+                          select obj;
+            foreach (ContentControl tom in tomList)
+            {
+                playArea.Children.Remove(tom);
+                tomscore += 1;
+            }
+            await RemoveRebecca(brandon, 2);
+        }
+
 #endregion
 
         #region Removing Objects
@@ -460,9 +492,9 @@ namespace SaveTheIntern
             storyboard.Begin();
         }
 
-        private void AnimateRebecca(ContentControl contentObject, double from, double to, string propertyToAnimate, int speed)
+        private void AnimateRebecca(ContentControl contentObject, double from, double to, string propertyToAnimate, double speed)
         {
-            Storyboard storyboard = new Storyboard() { AutoReverse = false};
+            Storyboard storyboard = new Storyboard() { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever };
             DoubleAnimation animation = new DoubleAnimation()
             {
                 From = from,

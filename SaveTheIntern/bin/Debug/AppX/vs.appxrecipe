@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-18T20:18:35.037</Modified>
+      <Modified>2016-08-18T20:36:36.162</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\SaveTheIntern.exe">
       <PackagePath>SaveTheIntern.exe</PackagePath>
-      <Modified>2016-08-18T20:18:34.746</Modified>
+      <Modified>2016-08-18T20:46:18.836</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -110,19 +110,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2016-08-18T20:18:34.485</Modified>
+      <Modified>2016-08-18T20:36:35.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\Instructions.xbf">
       <PackagePath>Instructions.xbf</PackagePath>
-      <Modified>2016-08-18T20:18:34.485</Modified>
+      <Modified>2016-08-18T20:36:35.491</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\Instructions2.xbf">
       <PackagePath>Instructions2.xbf</PackagePath>
-      <Modified>2016-08-18T20:18:34.485</Modified>
+      <Modified>2016-08-18T20:36:35.492</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2016-08-18T20:18:34.489</Modified>
+      <Modified>2016-08-18T20:39:50.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\SaveTheIntern.xr.xml">
       <PackagePath>SaveTheIntern.xr.xml</PackagePath>
@@ -130,7 +130,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-18T20:18:34.867</Modified>
+      <Modified>2016-08-18T20:36:35.991</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

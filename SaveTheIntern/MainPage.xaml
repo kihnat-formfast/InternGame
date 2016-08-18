@@ -80,7 +80,7 @@
             <Grid>
                 <Ellipse Height="100" Stroke="Black" Width="100">
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="brandon.jpeg"/>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="brandon.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
             </Grid>
