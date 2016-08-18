@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-18T20:11:15.995</Modified>
+      <Modified>2016-08-18T20:18:35.037</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\SaveTheIntern.exe">
       <PackagePath>SaveTheIntern.exe</PackagePath>
-      <Modified>2016-08-18T20:11:15.652</Modified>
+      <Modified>2016-08-18T20:18:34.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -51,6 +51,10 @@
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\officebackground.png">
       <PackagePath>officebackground.png</PackagePath>
       <Modified>2016-08-18T20:06:55.758</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\brandon.jpg">
+      <PackagePath>brandon.jpg</PackagePath>
+      <Modified>2016-08-18T19:46:35.557</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\break-room.jpg">
       <PackagePath>break-room.jpg</PackagePath>
@@ -106,23 +110,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2016-08-18T20:11:15.376</Modified>
+      <Modified>2016-08-18T20:18:34.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\Instructions.xbf">
       <PackagePath>Instructions.xbf</PackagePath>
-      <Modified>2016-08-18T20:11:15.376</Modified>
+      <Modified>2016-08-18T20:18:34.485</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\Instructions2.xbf">
+      <PackagePath>Instructions2.xbf</PackagePath>
+      <Modified>2016-08-18T20:18:34.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2016-08-18T20:11:15.380</Modified>
+      <Modified>2016-08-18T20:18:34.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\SaveTheIntern.xr.xml">
       <PackagePath>SaveTheIntern.xr.xml</PackagePath>
-      <Modified>2016-08-18T20:11:15.322</Modified>
+      <Modified>2016-08-18T20:17:51.518</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kihnat\Documents\InternGame\SaveTheIntern\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-18T20:11:15.825</Modified>
+      <Modified>2016-08-18T20:18:34.867</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
