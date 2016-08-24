@@ -1,0 +1,6 @@
+.vs/
+SaveTheIntern/obj/
+SaveTheIntern/bin/
+SaveTheIntern/packages/
+packages/
+*.suo
