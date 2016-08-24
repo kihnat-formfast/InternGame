@@ -32,6 +32,7 @@ namespace SaveTheIntern
         DispatcherTimer rebeccaTimer = new DispatcherTimer();
         DispatcherTimer joshTimer = new DispatcherTimer();
         DispatcherTimer brandonTimer = new DispatcherTimer();
+        DispatcherTimer andacobTimer = new DispatcherTimer();
         bool humanCaptured = false;
         int mainScore = 0;
         int sideScore = 0;
@@ -40,6 +41,9 @@ namespace SaveTheIntern
         int rebScore = 0;
         int irfanScore = 0;
         int ryanScore = 0;
+        int crisisScore = 0;
+        bool highscore;
+        bool canCollect;
 
         #region Navigation Helper
 
@@ -138,9 +142,15 @@ namespace SaveTheIntern
             brandonTimer.Tick += brandonTimer_Tick;
             brandonTimer.Interval = TimeSpan.FromSeconds(30);
 
+            andacobTimer.Tick += andacobTimer_Tick;
+            andacobTimer.Interval = TimeSpan.FromSeconds(10);
+
             gameOver.Visibility = Visibility.Collapsed;
             gameOverText.Visibility = Visibility.Collapsed;
             playArea.Visibility = Visibility.Collapsed;
+
+            highscore = false;
+            canCollect = true;
         }
 
         # region Basic Actions
@@ -166,6 +176,9 @@ namespace SaveTheIntern
             mainScore = 0;
             sideScore = 0;
             testScore = 0;
+            crisisScore = 0;
+            highscore = false;
+            canCollect = true;
 
             playArea.Children.Clear();
             playArea.Children.Add(target);
@@ -188,10 +201,12 @@ namespace SaveTheIntern
                 enemyTimer.Stop();
                 targetTimer.Stop();
                 rebeccaTimer.Stop();
+                andacobTimer.Stop();
                 if (joshTimer.IsEnabled)
                 { joshTimer.Stop(); }
                 brandonTimer.Stop();
                 humanCaptured = false;
+                highscore = false;
 
                 startButton.Visibility = Visibility.Visible;
                 instructionsButton.Visibility = Visibility.Visible;
@@ -207,7 +222,7 @@ namespace SaveTheIntern
                 gameOver.Visibility = Visibility.Visible;
                 gameOverText.Visibility = Visibility.Visible;
 
-                int score = (mainScore * 10) + (sideScore * 5) + testScore + tomscore + rebScore + irfanScore + ryanScore;
+                int score = (mainScore * 10) + (sideScore * 5) + (crisisScore *5) + testScore + tomscore + rebScore + irfanScore + ryanScore;
                 scoreValue.Text = score.ToString();
                 mainProjectsValue.Text = mainScore.ToString();
                 sideProjectsValue.Text = sideScore.ToString();
@@ -216,6 +231,7 @@ namespace SaveTheIntern
                 rebeccaValue.Text = rebScore.ToString();
                 irfanValue.Text = irfanScore.ToString();
                 ryanValue.Text = ryanScore.ToString();
+                crisisValue.Text = crisisScore.ToString();
                 firedReason.Text = reason;
 
             }
@@ -335,6 +351,10 @@ namespace SaveTheIntern
             AddBrandon();
         }
 
+        void andacobTimer_Tick(object sender, object e)
+        {
+            AddCrisis();
+        }
 #endregion
 
         #region Adding Objects
@@ -358,6 +378,18 @@ namespace SaveTheIntern
                 random.Next((int)playArea.ActualHeight - 100), "(Canvas.Top)");
             playArea.Children.Add(test);
             test.PointerEntered += test_PointerEntered;
+        }
+
+        private void AddCrisis()
+        {
+            ContentControl crisis = new ContentControl();
+            crisis.Template = Resources["CrisisTemplate"] as ControlTemplate;
+            AnimateIrfan(crisis, 0, playArea.ActualWidth - 100, "(Canvas.Left)");
+            AnimateIrfan(crisis, random.Next((int)playArea.ActualHeight - 100),
+                random.Next((int)playArea.ActualHeight - 100), "(Canvas.Top)");
+            playArea.Children.Add(crisis);
+            crisis.PointerEntered += crisis_PointerEntered;
+            canCollect = false;
         }
 
         private void AddEnemy()
@@ -438,6 +470,16 @@ namespace SaveTheIntern
                 tomscore += 1;
             }
             await RemoveRebecca(brandon, 2);
+        }
+
+        private void AddAndacob()
+        {
+            ContentControl andacob = new ContentControl();
+            andacob.Template = Resources["AndacobTemplate"] as ControlTemplate;
+            AnimateAndacob(andacob, 0, playArea.ActualWidth - 100, "(Canvas.Left)");
+            AnimateAndacob(andacob, ((int)playArea.ActualHeight - 100),
+                ((int)playArea.ActualHeight - 100), "(Canvas.Top)");
+            playArea.Children.Add(andacob);
         }
 
 #endregion
@@ -522,6 +564,20 @@ namespace SaveTheIntern
             storyboard.Begin();
         }
 
+        private void AnimateAndacob(ContentControl contentObject, double from, double to, string propertyToAnimate)
+        {
+            Storyboard storyboard = new Storyboard() { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever };
+            DoubleAnimation animation = new DoubleAnimation()
+            {
+                From = from,
+                To = to,
+                Duration = new Duration(TimeSpan.FromSeconds(5))
+            };
+            Storyboard.SetTarget(animation, contentObject);
+            Storyboard.SetTargetProperty(animation, propertyToAnimate);
+            storyboard.Children.Add(animation);
+            storyboard.Begin();
+        }
         #endregion
 
         # region Events
@@ -550,7 +606,7 @@ namespace SaveTheIntern
 
         void ryan_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            if (humanCaptured)
+            if (humanCaptured && canCollect)
             {
                 AddProject();
                 var list = playArea.Children;
@@ -582,7 +638,7 @@ namespace SaveTheIntern
 
         private void irfan_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            if (humanCaptured)
+            if (humanCaptured && canCollect)
             {
                 if (progressBar.Value > 15)
                 { progressBar.Value -= 15; }
@@ -596,12 +652,11 @@ namespace SaveTheIntern
                 playArea.Children.Remove(irfan);
                 irfanScore += 1;
             }
-
         }
 
         private void target_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            if (humanCaptured)
+            if (humanCaptured && canCollect)
             {
                 if (progressBar.Value > 15)
                 { progressBar.Value -= 15; }
@@ -609,26 +664,38 @@ namespace SaveTheIntern
                 Canvas.SetLeft(target, random.Next(100, (int)playArea.ActualWidth - 100));
                 Canvas.SetTop(target, random.Next(100, (int)playArea.ActualHeight - 100));
                 mainScore += 1;
+                if(highscore == false && mainScore>=10 && sideScore >=5 && testScore >=4)
+                {
+                    highscore = true;
+                    AddAndacob();
+                    andacobTimer.Start();
+                }
             }
         }
 
         private void project_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             ContentControl project = sender as ContentControl;
-            if (humanCaptured)
+            if (humanCaptured && canCollect)
             {
                 if (progressBar.Value > 20)
                 { progressBar.Value -= 20; }
                 else { progressBar.Value = 0; }
                 playArea.Children.Remove(project);
                 sideScore += 1;
+                if (highscore == false && mainScore >= 10 && sideScore >= 5 && testScore >= 4)
+                {
+                    highscore = true;
+                    AddAndacob();
+                    andacobTimer.Start();
+                }
             }
         }
 
         private void test_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             ContentControl project = sender as ContentControl;
-            if (humanCaptured)
+            if (humanCaptured & canCollect)
             {
                 int time = random.Next(-10, 20);
                 if (progressBar.Value > time)
@@ -636,6 +703,26 @@ namespace SaveTheIntern
                 else { progressBar.Value = 0; }
                 playArea.Children.Remove(project);
                 testScore += 1;
+                if (highscore == false && mainScore >= 10 && sideScore >= 5 && testScore >= 4)
+                {
+                    highscore = true;
+                    AddAndacob();
+                    andacobTimer.Start();
+                }
+            }
+        }
+
+        private void crisis_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ContentControl project = sender as ContentControl;
+            if (humanCaptured)
+            {
+                if (progressBar.Value > 10)
+                { progressBar.Value -= 10; }
+                else { progressBar.Value = 0; }
+                playArea.Children.Remove(project);
+                crisisScore += 1;
+                canCollect = true;
             }
         }
 

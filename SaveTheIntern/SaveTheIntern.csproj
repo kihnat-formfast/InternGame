@@ -150,6 +150,7 @@
     <Content Include="break-room.jpg" />
     <Content Include="code.jpg" />
     <Content Include="commandline.jpg" />
+    <Content Include="fire.jpg" />
     <Content Include="holt.jpg" />
     <Content Include="intern.jpg" />
     <Content Include="irfan.jpg" />
@@ -161,6 +162,7 @@
     <Content Include="ryan.jpg" />
     <Content Include="street.jpg" />
     <Content Include="test.jpg" />
+    <Content Include="twoheaded.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

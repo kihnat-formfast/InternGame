@@ -76,8 +76,8 @@
       <RootProperty Name="Style" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontWeight" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="TextAlignment" />
     </RootType>
@@ -121,6 +121,11 @@
       <RootProperty Name="Opacity" />
       <RootEvent Name="PointerEntered" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="SaveTheIntern.Instructions2" />
     <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
       <RootProperty Name="TargetType" />
@@ -137,11 +142,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontSize" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="SaveTheIntern.MainPage" />
   </Roots.RootTypes>
 </Roots>

@@ -74,8 +74,18 @@
                 <ImageBrush Stretch="UniformToFill" ImageSource="test.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
+        <Rectangle Height="75" Canvas.Left="1150" Stroke="Black" Canvas.Top="345" Width="75" RenderTransformOrigin="0.5,0.5" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,550,0">
+            <Rectangle.Fill>
+                <ImageBrush Stretch="UniformToFill" ImageSource="fire.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="1" TextWrapping="Wrap" Text="Main Project:&#xD;&#xA;There is always one main project.  Collecting it adds the most time to your timer and spawns another one." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="0" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="2" TextWrapping="Wrap" Text="Side Project:&#xD;&#xA;Given to you by coworkers, this project will add some time, but can be destroyed." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="0" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236"/>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="3" TextWrapping="Wrap" Text="Test:&#xD;&#xA;Hard to complete, and adds or subtracts a random amount of time." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="0" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236" />
+        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="0" Margin="0,0,20,0" Canvas.ZIndex="1" Foreground="#FF073236" >
+        	<Run Text="Support Crisis:"/>
+        	<LineBreak/>
+        	<Run Text="These are super important, and you cannot collect any other projects until this is dealt with.  Adds only a small amount of time"/>
+        </TextBlock>
     </Grid>
 </Page>

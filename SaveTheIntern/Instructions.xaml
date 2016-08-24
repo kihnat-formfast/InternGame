@@ -95,7 +95,7 @@
                 <ImageBrush Stretch="UniformToFill" ImageSource="brandon.jpg"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Ellipse Height="100" Stroke="Black" Width="175" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,500,0">
+        <Ellipse Height="100" Stroke="Black" Width="175" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Canvas.ZIndex="1" Margin="0,0,520,0">
             <Ellipse.Fill>
                 <ImageBrush Stretch="UniformToFill" ImageSource="twoheaded.jpg"/>
             </Ellipse.Fill>
@@ -106,6 +106,6 @@
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="4" TextWrapping="Wrap" Text="Irfan (Coworker):&#xD;&#xA;He is small and sneaky.  He will bounce around and move your projects.  If you can catch him, he will give you more time." VerticalAlignment="Center" Width="485" FontSize="24" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236"/>
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="1" TextWrapping="Wrap" Text="Josh (Coworker):&#xD;&#xA;He gets rid of all coworkers and projects he can find to generate tests. Touching him only makes more tests." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
         <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="2" TextWrapping="Wrap" Text="Brandon (Coworker):&#xA;He only shows up occasionally, but he will clear the room with his shining personality (or ego depending on who you ask)" VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
-        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="3" TextWrapping="Wrap" Text="Andacob (Coworker):&#xA;A fearsome support fighting duo depending on who you ask)" VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
+        <TextBlock HorizontalAlignment="Right" Height="137" Grid.Row="3" TextWrapping="Wrap" Text="Andacob (Coworker):&#xA;A problem solving duo that has more tickets than they can handle.  They only show up once you  have completed 10 main projects, 5 side projects and 4 tests." VerticalAlignment="Center" Width="485" FontSize="24" Grid.Column="1" Margin="0,10,20,10" Canvas.ZIndex="1" Foreground="#FF073236" />
     </Grid>
 </Page>
